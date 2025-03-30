@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Maaf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: left;
+        }
+        .text {
+            font-size: 18px;
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+        .cursor {
+            display: inline-block;
+            width: 5px;
+            height: 18px;
+            background: black;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text" id="text"></div>
+        <span class="cursor"></span>
+    </div>
+
+    <script>
+        const text = `Lintangku sayang kuuu,
+
+Aku mau minta maaf atas semua kekurangan dan kesalahan aku selama ini. Aku sadar mungkin aku sering bikin kamu kecewa atau nggak selalu bisa jadi pasangan yang baik buat kamu. Kadang aku terlalu egois, kurang peka, atau nggak cukup perhatian sama perasaan kamu. Aku bener-bener nyesel kalau pernah nyakitin hati kamu, meskipun aku nggak pernah ada niat buat itu. Aku cuma mau kamu tahu kalau aku sayang banget sama kamu, dan aku pengen terus belajar buat jadi lebih baik lagi buat hubungan kita.
+
+Di momen Lebaran ini, aku juga mau minta maaf lahir dan batin. Kalau ada kata-kata aku yang nyelekit, sikap aku yang nyebelin, atau hal-hal kecil yang mungkin bikin kamu sedih, aku harap kamu bisa maafin aku. Aku pengen kita tetap bisa jalan bareng, tetap bisa saling dukung, dan makin ngerti satu sama lain. Aku tahu hubungan itu nggak selalu mulus, tapi aku yakin kalau kita sama-sama mau berusaha, kita bisa jadi lebih kuat bareng.
+
+Selamat Hari Raya Idul Fitri ya, sayang. Semoga kita selalu bahagia, selalu diberikan kesehatan, keberkahan, dan hubungan kita makin erat. Aku bersyukur bisa punya kamu di hidup aku, dan aku berharap kita bisa terus maju bersama. Maaf lahir dan batin ya, aku sayang kamu!
+
+from xaki to lovely L`;
+        
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+        
+        window.onload = typeEffect;
+    </script>
+</body>
+</html>
